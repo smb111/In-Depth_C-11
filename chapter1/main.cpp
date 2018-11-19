@@ -6,7 +6,6 @@ public:
 	int i = 0;
 };
 
-
 class Foo {
 public:
 	int x;
@@ -20,12 +19,10 @@ int main()
 
 	decltype(i) j = 1;
 	
-
 	const Foo foo = Foo();
-
 	decltype(foo.x) a = 3;
 	decltype((foo.x)) b = a;
-	a = 3;
+	a = 3; // a : int
 	// b = 4; b : const int &
 
 
