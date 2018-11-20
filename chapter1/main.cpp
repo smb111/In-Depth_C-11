@@ -43,6 +43,18 @@ using str_map_T = std::map<std::string, Val>;
 str_map_T<int> map1;
 
 
+/* 使用 using 比 typedef 语义更加的明确 */
+typedef unsigned int uuint;
+using uuint_ = unsigned int;
+
+typedef void (*func_t)(int, int);
+using func_t_ = void (*) (int, int);
+
+void func2(int x, int y)
+{
+	cout << x << " " << y << endl;
+}
+
 int main()
 {
 	auto i = 5;
@@ -64,6 +76,9 @@ int main()
 	map_str_t mymap;
 	mymap["string"] = 1;
 	cout << mymap["string"] << endl;
+
+	func_t_ myfunc = func2;
+	myfunc(4,2);
 
 	return 0;
 }
