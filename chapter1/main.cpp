@@ -29,6 +29,8 @@ public:
 	T t;
 };
 
+asdasd
+
 #include <map>
 #include <string>
 typedef unsigned int uint;
