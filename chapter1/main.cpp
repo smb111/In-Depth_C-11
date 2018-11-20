@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+哈哈哈
 class A {
 public:
 	int i = 0;
