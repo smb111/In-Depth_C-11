@@ -1,9 +1,6 @@
 #include <iostream>
 using namespace std;
-<<<<<<< HEAD
-=======
 
->>>>>>> 9101534c5c68e104404e9c814d4a00ee998ef8ef
 class A {
 public:
 	int i = 0;
