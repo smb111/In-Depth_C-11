@@ -28,8 +28,6 @@ public:
 	T t;
 };
 
-asdasd
-weqewq
 #include <map>
 #include <string>
 typedef unsigned int uint;
