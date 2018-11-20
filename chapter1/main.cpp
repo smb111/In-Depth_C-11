@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-哈哈哈
 class A {
 public:
 	int i = 0;
@@ -30,7 +29,7 @@ public:
 };
 
 asdasd
-
+weqewq
 #include <map>
 #include <string>
 typedef unsigned int uint;
