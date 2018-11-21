@@ -50,6 +50,31 @@ using uuint_ = unsigned int;
 typedef void (*func_t)(int, int);
 using func_t_ = void (*) (int, int);
 
+
+/* 使用 using 定义模板别名 */
+template <typename T>
+// typedef void (*func3_t)(T, T);  直接这么声明是不行的
+class Func3_t{
+public:
+	typedef void (*type)(T, T);	
+};
+Func3_t<int>::type xx_1;
+// 上面的内嵌型定义太繁琐了， 使用 using 可以很轻松的定义模板类型
+template <typename T>
+using func3_t_ = void (*)(T,T);
+
+
+class Test {
+public:
+	int i;
+	void test(int x, int y)
+	{
+		int z = x + y;
+		cout << "The sum of x & y is : " << z << endl;
+	}	
+	
+};
+
 void func2(int x, int y)
 {
 	cout << x << " " << y << endl;
@@ -57,6 +82,7 @@ void func2(int x, int y)
 
 int main()
 {
+	// Test::test(2,2); 没有对象无法带哦用非静态的 成员变量 和  成员函数	
 	auto i = 5;
 	
 	cout << i << endl;
@@ -79,7 +105,10 @@ int main()
 
 	func_t_ myfunc = func2;
 	myfunc(4,2);
-
+		
+	// using 定义模板类型
+	func3_t_<int> myfunc3_t = func2;
+	myfunc3_t(4,6); 
 	return 0;
 }
 
